@@ -19,14 +19,9 @@ function initMap() {
 function callApi(requestUrl) {
   fetch(requestUrl)
     .then(function (response) {
-      // console.log(response);
-      // if (response.status === 200) {
-      //   responseText.textContent = response.status;
-      // }
       return response.json();
     })
     .then(function (data) {
-      // console.log(data.results[0].geometry.location);
       lat = data.results[0].geometry.location.lat;
       lng = data.results[0].geometry.location.lng;
       console.log("Coordinates: (" + lat + ", " + lng + ")/n")
@@ -45,7 +40,7 @@ $('#form').on('click', "#searchBtn", function (event) {
       geo_url_params += stringSplit2[i]
     }
   };
-  callApi(geo_url_path+geo_url_params+api_key);
+  callApi(geo_url_path + geo_url_params + api_key);
 
   var dest_input = $('#destination').val();
   var stringSplit = dest_input.split(" ");
@@ -58,8 +53,7 @@ $('#form').on('click', "#searchBtn", function (event) {
     }
   };
   console.log(geo_url_params);
-  // console.log(geoRequestUrl);
-  // console.log(geo_url_path+geo_url_params+api_key)
-  callApi(geo_url_path+geo_url_params+api_key);
+
+  callApi(geo_url_path + geo_url_params + api_key);
 }
 )
