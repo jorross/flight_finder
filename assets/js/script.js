@@ -24,3 +24,12 @@ function callApi(requestUrl) {
   }
   
 callApi(geoRequestUrl);
+
+let map;
+
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: 37.422388, lng: -122.0841883 },
+    zoom: 8,
+  });
+}
