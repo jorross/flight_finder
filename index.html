@@ -31,7 +31,7 @@
               <!-- Tab pane -->
               <div class="tab-content col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0">
                 <div role="tabpanel" class="tab-pane active">
-                  <form role="form">
+                  <form role="form" id="form">
                     <div class="form-group">
                       <label for="from">From</label>
                       <input type="text" class="form-control" id="from">
@@ -72,12 +72,13 @@
                         <option>5</option>
                       </select>
                     </div>
+                    <button class="btn btn-danger" id="searchBtn">Search</button>
                   </form>
                 </div> 
                 
-                <button class="btn btn-default" type="submit" id="search-button" alt="Search button">
+                <!-- <button class="btn btn-default" type="submit" id="search-button" alt="Search button">
                   <span class="glyphicon glyphicon-search"></span> Search
-                </button>
+                </button> -->
               </div> <!-- end of tabs -->
       
               <!-- Refine price -->
