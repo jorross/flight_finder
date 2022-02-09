@@ -16,7 +16,7 @@ function initMap() {
   });
 }
 
-function callApi(requestUrl) {
+function callGeoApi(requestUrl) {
   fetch(requestUrl)
     .then(function (response) {
       return response.json();
@@ -30,6 +30,8 @@ function callApi(requestUrl) {
 
 $('#form').on('click', "#searchBtn", function (event) {
   event.preventDefault();
+  
+  // Parse origin location input from the html
   var origin_input = $('#from').val();
   var stringSplit2 = origin_input.split(" ");
   for (var i = 0; i < stringSplit2.length; i++) {
@@ -40,8 +42,10 @@ $('#form').on('click', "#searchBtn", function (event) {
       geo_url_params += stringSplit2[i]
     }
   };
-  callApi(geo_url_path + geo_url_params + api_key);
+  // make call to geocode api for the origin coordinates
+  callGeoApi(geo_url_path + geo_url_params + api_key);
 
+  // Parse destination location input from the html
   var dest_input = $('#destination').val();
   var stringSplit = dest_input.split(" ");
   for (var i = 0; i < stringSplit.length; i++) {
@@ -53,7 +57,7 @@ $('#form').on('click', "#searchBtn", function (event) {
     }
   };
   console.log(geo_url_params);
-
-  callApi(geo_url_path + geo_url_params + api_key);
+  // make call to geocode api for the destination coordinates
+  callGeoApi(geo_url_path + geo_url_params + api_key);
 }
 )
