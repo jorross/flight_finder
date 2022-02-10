@@ -2,14 +2,33 @@ var geo_url_path = "https://maps.googleapis.com/maps/api/geocode/json"
 var geo_url_params1 = "?address=";
 var geo_url_params2 = "?address=";
 var api_key = "&key=AIzaSyCAhY-AP5wzYt1ngWZ86qHYzoUsYKnoQmE";
-var flightApi = "00ef121ef8bdc0d46f86b8dcf2b97155";
+var flight_Path = "https://api.aviationstack.com/v1/flights"
+var flight_Param = "?"
+var flightApi = "access_key=00ef121ef8bdc0d46f86b8dcf2b97155";
+
+// https://api.aviationstack.com/v1/flights ? access_key = YOUR_ACCESS_KEY
 var lat, lng;
 
 let map;
 
 if (location === "./results.html") {
   initMap();
-}
+};
+var newURL = flightURL()
+function flightURL(){
+   var DateSplit = localStorage.getItem("Date").split(", ");
+   var Date1 = DateSplit[0];
+   var Date2 = DateSplit[1];
+   var originInput = localStorage.getItem("origin_String")
+   var DestinationInput = localStorage.getItem("Destination_String")
+   fetch("http://api.aviationstack.com/v1/cities?access_key=00ef121ef8bdc0d46f86b8dcf2b97155")
+   .then(function(result){
+     console.log(result.json());
+   });
+   flight_Param += "flight_date=" + Date1 ;
+   
+   return flight_Path + flight_Param + flightApi;
+  };
 
 function initMap() {
   const myLatLng = { lat: 34.0848304, lng: -84.3893775 };
@@ -85,7 +104,11 @@ $('#form').on('click', "#searchBtn", function (event) {
       geo_url_params2 += stringSplit[i]
     }
   };
-  
+    var Date_input = "" + $("#date-picker-from").val() + ", "  + $("#date-picker-to").val() ;
+    localStorage.setItem("Date", Date_input);
+    localStorage.setItem("origin_String", origin_input);
+    localStorage.setItem("Destination_String", dest_input);
+
   // make call to geocode api for the origin coordinates
   callGeoApi(geo_url_path + geo_url_params1 + api_key).then(function (result1) {
     // make call to geocode api for the destination coordinates
