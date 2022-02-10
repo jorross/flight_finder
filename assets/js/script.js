@@ -10,7 +10,9 @@ let map;
 if (location === "./results.html") {
   initMap();
 }
+function flightUrl() {
 
+}
 function initMap() {
   const myLatLng = { lat: 34.0848304, lng: -84.3893775 };
   var stringSplit = localStorage.getItem('origin').split(", ");
