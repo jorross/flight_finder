@@ -26,6 +26,7 @@
             <div class="col-md-3">
       
               <!-- Nav tabs -->
+              
               <section class= "content">
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active" id="one-way-tab"><a role="tab" data-toggle="tab">One way</a></li>
@@ -54,9 +55,10 @@
                       <p class="form-input-title">Departure date</p>
                       <div class="controls">
                         <div class="input-group">
-                          <input id="date-picker-from" type="text" class="date-picker form-control" title="Click to pick a departure date" />
+                          <input id="date-picker-from" type="text" class="date-picker form-control" title="Click to pick a departure date" value="&#xe109;" />
                           <label for="date-picker-from" class="input-group-addon btn" title="Click icon calendar to pick a departure date" >
-                            <span class="glyphicon glyphicon-calendar"></span>
+                           <!-- <span class="glyphicon glyphicon-calendar"></span> -->
+                           <i class="glyphicon glyphicon-calendar"></i>
                           </label>
                         </div>
                       </div>
@@ -65,9 +67,10 @@
                       <p class="form-input-title">Return date</p>
                       <div class="controls">
                         <div class="input-group">
-                          <input id="date-picker-to" type="text" class="date-picker form-control" title="Return date picker"/>
+                          <input id="date-picker-to" type="text" class="date-picker form-control" title="Return date picker"  value="&#xe109;"/>
                           <label for="date-picker-to" class="input-group-addon btn">
-                            <span class="glyphicon glyphicon-calendar"></span>
+                           <!--  <span class="glyphicon glyphicon-calendar"></span> -->
+                           <i class="glyphicon glyphicon-calendar"></i>
                           </label>
                         </div>
                       </div>
@@ -85,11 +88,13 @@
                     <button class="btn btn-danger" id="searchBtn">Search</button>
                   </form>
                 </div> 
+              
                 </section>
+              
                 <!-- <button class="btn btn-default" type="submit" id="search-button" alt="Search button">
                   <span class="glyphicon glyphicon-search"></span> Search
                 </button> -->
-              </div> <!-- end of tabs -->
+               <!-- end of tabs -->
       
               <!-- Refine price -->
               <div class="col-sm-6 col-sm-offset-3 col-md-12 col-md-offset-0" id="price-range">

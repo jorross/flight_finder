@@ -21,6 +21,7 @@ body {
     margin-left: 20px;
     font-size: 24px;
     margin-top: 20px;
+
 }
 header {
     padding:20px;
@@ -45,4 +46,10 @@ header h1 {
 }
 ul {
     margin-top: 20px;
+}
+#departure-date{
+    content:"\e109";
+}
+#return-date {
+    content:"\e109";
 }
