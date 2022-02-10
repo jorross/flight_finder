@@ -2,7 +2,7 @@ var geo_url_path = "https://maps.googleapis.com/maps/api/geocode/json"
 var geo_url_params1 = "?address=";
 var geo_url_params2 = "?address=";
 var api_key = "&key=AIzaSyCAhY-AP5wzYt1ngWZ86qHYzoUsYKnoQmE";
-
+var flightApi = "00ef121ef8bdc0d46f86b8dcf2b97155";
 var lat, lng;
 
 let map;
@@ -98,4 +98,5 @@ $('#form').on('click', "#searchBtn", function (event) {
 
   });
 }
+
 )
