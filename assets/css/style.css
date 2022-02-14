@@ -9,12 +9,20 @@ body {
 
 .Pic img {
     position: relative;
-    height: 500px;
-    width: 100%;
+    height: 400px;
+    width: 60%;
     opacity: 0.5;
     top: 0px;
+   margin-left: 10%;
 
 }
+.Centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+  }
 .content {
     width:95%;
     display:inline-block;
