@@ -47,9 +47,3 @@ header h1 {
 ul {
     margin-top: 20px;
 }
-#departure-date{
-    content:"\e109";
-}
-#return-date {
-    content:"\e109";
-}

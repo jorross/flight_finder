@@ -5,7 +5,6 @@ var api_key = "&key=AIzaSyCAhY-AP5wzYt1ngWZ86qHYzoUsYKnoQmE";
 var flight_Path = "https://api.aviationstack.com/v1/flights"
 var flight_Param = "?"
 var flightApi = "access_key=00ef121ef8bdc0d46f86b8dcf2b97155";
-
 // https://api.aviationstack.com/v1/flights ? access_key = YOUR_ACCESS_KEY
 var lat, lng;
 
@@ -26,9 +25,15 @@ function flightURL(){
      console.log(result.json());
    });
    flight_Param += "flight_date=" + Date1 ;
+   flight_Param += "flight_date="  + Date2 ;
    
    return flight_Path + flight_Param + flightApi;
+
   };
+   
+  
+
+  
 
 function initMap() {
   const myLatLng = { lat: 34.0848304, lng: -84.3893775 };
@@ -104,6 +109,7 @@ $('#form').on('click', "#searchBtn", function (event) {
       geo_url_params2 += stringSplit[i]
     }
   };
+  // storage the Date, origin and destination in localstorage 
     var Date_input = "" + $("#date-picker-from").val() + ", "  + $("#date-picker-to").val() ;
     localStorage.setItem("Date", Date_input);
     localStorage.setItem("origin_String", origin_input);
