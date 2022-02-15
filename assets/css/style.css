@@ -18,10 +18,11 @@ body {
 }
 .Centered {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 30%;
+    left: 40%;
     transform: translate(-50%, -50%);
-    font-size: 24px;
+    font-size: 36px;
+    font-weight: bold;
   }
 .content {
     width:95%;
@@ -55,3 +56,5 @@ header h1 {
 ul {
     margin-top: 20px;
 }
+
+
