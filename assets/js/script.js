@@ -16,7 +16,20 @@ if (location === "./results.html") {
 
 var newURL = flightURL()
 
-flightApiCall(newURL);
+flightApiCall(newURL).then(function(result) {
+  console.log(result);
+
+  for (var i=0; i<result.data.length; i++) {
+    $("tbody").append(
+      '<tr>',
+      '<th scope="row">'+i+'</th>',
+      '<td>'+result.data[i].departure.airport+'</td',
+      '<td>'+result.data[i].arrival.airport+'</td',
+      '<td>'+result.data[i].airline.name+'</td',
+      '</tr>',
+    )
+  }
+});
 
 function flightURL() {
   // var DateSplit = localStorage.getItem("Date").split(", ");
@@ -40,9 +53,7 @@ function flightApiCall(requestUrl) {
     .then(function (data) {
       console.log(data);
 
-      for (var i = 0; i < data.length; i++) {
-        localStorage.setItem("flight" + i, data[i].toString())
-      }
+      return data;
       // var payload = {
       //   "Lat": lat,
       //   "Lng": lng
