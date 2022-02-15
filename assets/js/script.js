@@ -4,7 +4,7 @@ var geo_url_params2 = "?address=";
 var api_key = "&key=AIzaSyCAhY-AP5wzYt1ngWZ86qHYzoUsYKnoQmE";
 var flight_Path = "https://api.aviationstack.com/v1/flights"
 var flight_Param = "?"
-var flightApi = "access_key=00ef121ef8bdc0d46f86b8dcf2b97155";
+var flightApi = "access_key=a867cfeb994a9fe529a2a3195bb03be8";
 // https://api.aviationstack.com/v1/flights ? access_key = YOUR_ACCESS_KEY
 var lat, lng;
 
@@ -15,22 +15,28 @@ if (location === "./results.html") {
 };
 var newURL = flightURL()
 function flightURL(){
-   var DateSplit = localStorage.getItem("Date").split(", ");
-   var Date1 = DateSplit[0];
-   var Date2 = DateSplit[1];
-   var originInput = localStorage.getItem("origin_String")
-   var DestinationInput = localStorage.getItem("Destination_String")
-   fetch("http://api.aviationstack.com/v1/cities?access_key=00ef121ef8bdc0d46f86b8dcf2b97155")
-   .then(function(result){
-     console.log(result.json());
-   });
-   flight_Param += "flight_date=" + Date1 ;
-   flight_Param += "flight_date="  + Date2 ;
+ //  var DateSplit = localStorage.getItem("Date").split(", ");
+  // var Date1 = DateSplit[0];
+   //var Date2 = DateSplit[1];
+//   var originInput = localStorage.getItem("origin_String")
+  // var DestinationInput = localStorage.getItem("Destination_String")
+   
+  
+   flight_Param += "dep_iata=ATL&arr_iata=SEA&flight_date=2022-02-14&flight_status=scheduled&" ;
+   
    
    return flight_Path + flight_Param + flightApi;
 
   };
-   
+   function flightApiCall(requestUrl) {
+     fetch(requestUrl)
+     .then(function(response){
+       return response.json();
+     })
+     .then(function(data){
+       console.log(data);
+     });
+   }
   
 
   
@@ -110,7 +116,8 @@ $('#form').on('click', "#searchBtn", function (event) {
     }
   };
   // storage the Date, origin and destination in localstorage 
-    var Date_input = "" + $("#date-picker-from").val() + ", "  + $("#date-picker-to").val() ;
+    
+   var Date_input = "" + $("#date-input").val() + ", "  + $("#retur-date-input").val() ;
     localStorage.setItem("Date", Date_input);
     localStorage.setItem("origin_String", origin_input);
     localStorage.setItem("Destination_String", dest_input);
