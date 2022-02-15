@@ -3,8 +3,11 @@
     padding: 0;
     margin:0
 }
+
 body {
-    background-color: lightslategray;
+    background-image: url("../image/plane.png");
+    background-size: cover;
+    /* background-color: lightslategray; */
 }
 
 .Pic img {
@@ -49,6 +52,7 @@ header h1 {
 }
 .footer {
     text-align: center;
+    top: 90%;
 }
 #results{
   text-align: center;
