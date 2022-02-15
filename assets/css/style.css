@@ -51,8 +51,10 @@ header h1 {
 
 }
 .footer {
-    text-align: center;
-    top: 90%;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    font-weight: bold;
 }
 #results{
   text-align: center;
@@ -61,4 +63,10 @@ ul {
     margin-top: 20px;
 }
 
+#passengers_section {
+    margin-left: 12px;
+}
 
+#searchBtn {
+    margin-left: 12px;
+}
