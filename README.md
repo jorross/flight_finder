@@ -14,3 +14,5 @@ AviationStack API: https://aviationstack.com/
 GoogleMaps API: https://developers.google.com/maps/
 
 ## Screen Recording
+
+![Screen Recording Gif](./assets/images/flight-finder.gif)
