@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url("../image/plane.png");
+    background-image: url("../images/plane.png");
     background-size: cover;
     /* background-color: lightslategray; */
 }
