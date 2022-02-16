@@ -3,8 +3,11 @@
     padding: 0;
     margin:0
 }
+
 body {
-    background-color: lightslategray;
+    background-image: url("../images/plane.png");
+    background-size: cover;
+    /* background-color: lightslategray; */
 }
 
 .Pic img {
@@ -48,7 +51,10 @@ header h1 {
 
 }
 .footer {
-    text-align: center;
+    position: absolute;
+    bottom: 25px;
+    left: 50%;
+    font-weight: bold;
 }
 #results{
   text-align: center;
@@ -57,4 +63,10 @@ ul {
     margin-top: 20px;
 }
 
+#passengers_section {
+    margin-left: 12px;
+}
 
+#searchBtn {
+    margin-left: 12px;
+}

@@ -39,7 +39,7 @@ function flightURL() {
   // var DestinationInput = localStorage.getItem("Destination_String")
 
   // DAY OF PRESENTATION: CHANGE DATE!!!!!!!!!!!!!
-  flight_Param += "dep_iata=ATL&arr_iata=SEA&flight_date=2022-02-14&flight_status=scheduled&"
+  flight_Param += "dep_iata=ATL&arr_iata=SEA&flight_date=2022-02-16&flight_status=scheduled&"
 
   return flight_Path + flight_Param + flightApi;
 
