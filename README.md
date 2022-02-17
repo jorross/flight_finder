@@ -15,4 +15,4 @@ GoogleMaps API: https://developers.google.com/maps/
 
 ## Screen Recording
 
-![Screen Recording Gif](./assets/images/flight-finder.gif)
+![Screen Recording Gif](https://github.com/jorross/flight_finder/blob/main/assets/images/Flight-finder.gif)
